@@ -77,3 +77,13 @@ $('.slider-block').slick({
             }
         }]
 });
+
+
+$(".slider-block").on('afterChange beforeChange',function(event,slick,currentSlide,nextSlide){
+    // console.log($('.slider-block').slick('slickCurrentSlide'));
+    var current = $('.slider-block').slick('slickCurrentSlide');
+    var prev = ((current==2 ? 0 :current +1)+1);
+    var next = ((current==0 ? 2 :current -1)+1);
+    $('.slick-prev').css("background-image", "url("+"images/slide"+next+".png"+")");
+    $('.slick-next').css("background-image", "url("+"images/slide"+prev+".png"+")");
+});

@@ -992,6 +992,22 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .slider-block .slick-prev {
+    width: 180px;
+    height: 194px;
+    left: 0;
+  }
+  .slider-block .slick-next {
+    width: 180px;
+    height: 194px;
+    right: 0;
+  }
+  .slider-block .slick-next::before {
+    display: none;
+  }
+  .slider-block .slick-prev::before {
+    display: none;
+  }
   .footer-inner-info {
     font-family: "Raleway", sans-serif;
     font-size: 20px;
